@@ -1,0 +1,29 @@
+
+
+public class MileConversionsInteractive{
+
+    public static void main(String[] args) {
+        // Constants for conversion factors
+        final double INCHES_IN_MILE = 63360;
+        final double FEET_IN_MILE = 5280;
+        final double YARDS_IN_MILE = 1760;
+
+        // Create a Scanner object to read user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user for the distance in miles
+        System.out.print("Enter the distance in miles: ");
+        double miles = scanner.nextDouble();
+
+        // Perform the conversions
+        double inches = miles * INCHES_IN_MILE;
+        double feet = miles * FEET_IN_MILE;
+        double yards = miles * YARDS_IN_MILE;
+
+        // Display the results
+        System.out.println(miles + " miles is " + inches + " inches, or " + feet + " feet, or " + yards + " yards");
+
+        // Close the scanner to prevent resource leaks
+        scanner.close();
+    }
+}
